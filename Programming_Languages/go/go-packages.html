@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>go-packages</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../index.html"><strong aria-hidden="true">1.</strong> Welcome</a></li><li class="chapter-item expanded "><a href="../../intro.html"><strong aria-hidden="true">2.</strong> intro</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../../DevOps/index.html"><strong aria-hidden="true">3.</strong> DevOps</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DevOps/git-origin.html"><strong aria-hidden="true">3.1.</strong> git-origin</a></li><li class="chapter-item expanded "><a href="../../DevOps/ansible-vs-terraform.html"><strong aria-hidden="true">3.2.</strong> ansible-vs-terraform</a></li><li class="chapter-item expanded "><a href="../../DevOps/do-i-need-kubernetes.html"><strong aria-hidden="true">3.3.</strong> do-i-need-kubernetes</a></li><li class="chapter-item expanded "><a href="../../DevOps/why-is-terraform-useful.html"><strong aria-hidden="true">3.4.</strong> why-is-terraform-useful</a></li><li class="chapter-item expanded "><a href="../../DevOps/docker.html"><strong aria-hidden="true">3.5.</strong> docker</a></li><li class="chapter-item expanded "><a href="../../DevOps/best-server-os.html"><strong aria-hidden="true">3.6.</strong> best-server-os</a></li><li class="chapter-item expanded "><a href="../../DevOps/automate-os-install.html"><strong aria-hidden="true">3.7.</strong> automate-os-install</a></li><li class="chapter-item expanded "><a href="../../DevOps/ansible/index.html"><strong aria-hidden="true">3.8.</strong> ansible</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DevOps/ansible/ansible-notes.html"><strong aria-hidden="true">3.8.1.</strong> ansible-notes</a></li><li class="chapter-item expanded "><a href="../../DevOps/ansible/ansible.html"><strong aria-hidden="true">3.8.2.</strong> ansible</a></li></ol></li><li class="chapter-item expanded "><a href="../../DevOps/git/index.html"><strong aria-hidden="true">3.9.</strong> git</a></li><li class="chapter-item expanded "><a href="../../DevOps/docker/index.html"><strong aria-hidden="true">3.10.</strong> docker</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DevOps/docker/docker-documentation.html"><strong aria-hidden="true">3.10.1.</strong> docker-documentation</a></li><li class="chapter-item expanded "><a href="../../DevOps/docker/docker-desktop.html"><strong aria-hidden="true">3.10.2.</strong> docker-desktop</a></li><li class="chapter-item expanded "><a href="../../DevOps/docker/dockerfile-basics.html"><strong aria-hidden="true">3.10.3.</strong> dockerfile-basics</a></li><li class="chapter-item expanded "><a href="../../DevOps/docker/docker-install.html"><strong aria-hidden="true">3.10.4.</strong> docker-install</a></li><li class="chapter-item expanded "><a href="../../DevOps/docker/docker-postgres.html"><strong aria-hidden="true">3.10.5.</strong> docker-postgres</a></li><li class="chapter-item expanded "><a href="../../DevOps/docker/docker-basics.html"><strong aria-hidden="true">3.10.6.</strong> docker-basics</a></li><li class="chapter-item expanded "><a href="../../DevOps/docker/docker-rootless.html"><strong aria-hidden="true">3.10.7.</strong> docker-rootless</a></li><li class="chapter-item expanded "><a href="../../DevOps/docker/docker-error.html"><strong aria-hidden="true">3.10.8.</strong> docker-error</a></li><li class="chapter-item expanded "><a href="../../DevOps/docker/docker-terraform.html"><strong aria-hidden="true">3.10.9.</strong> docker-terraform</a></li><li class="chapter-item expanded "><a href="../../DevOps/docker/docker-networks.html"><strong aria-hidden="true">3.10.10.</strong> docker-networks</a></li><li class="chapter-item expanded "><a href="../../DevOps/docker/docker-save-image-backup.html"><strong aria-hidden="true">3.10.11.</strong> docker-save-image-backup</a></li><li class="chapter-item expanded "><a href="../../DevOps/docker/docker-context.html"><strong aria-hidden="true">3.10.12.</strong> docker-context</a></li><li class="chapter-item expanded "><a href="../../DevOps/docker/containerd.html"><strong aria-hidden="true">3.10.13.</strong> containerd</a></li><li class="chapter-item expanded "><a href="../../DevOps/docker/rust/index.html"><strong aria-hidden="true">3.10.14.</strong> rust</a></li><li class="chapter-item expanded "><a href="../../DevOps/docker/postgres/index.html"><strong aria-hidden="true">3.10.15.</strong> postgres</a></li></ol></li><li class="chapter-item expanded "><a href="../../DevOps/automation/index.html"><strong aria-hidden="true">3.11.</strong> automation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DevOps/automation/chron-jobs.html"><strong aria-hidden="true">3.11.1.</strong> chron-jobs</a></li></ol></li><li class="chapter-item expanded "><a href="../../DevOps/testing/index.html"><strong aria-hidden="true">3.12.</strong> testing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../DevOps/testing/test-fixture.html"><strong aria-hidden="true">3.12.1.</strong> test-fixture</a></li><li class="spacer"></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../Programming_Languages/index.html"><strong aria-hidden="true">4.</strong> Programming_Languages</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Programming_Languages/popularity.html"><strong aria-hidden="true">4.1.</strong> popularity</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/cs/index.html"><strong aria-hidden="true">4.2.</strong> cs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Programming_Languages/cs/debug_only_code.html"><strong aria-hidden="true">4.2.1.</strong> debug_only_code</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/cs/string_interpolation.html"><strong aria-hidden="true">4.2.2.</strong> string_interpolation</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/cs/can_you_avoid_repeating_type_name.html"><strong aria-hidden="true">4.2.3.</strong> can_you_avoid_repeating_type_name</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/cs/c#-using-statement.html"><strong aria-hidden="true">4.2.4.</strong> c#-using-statement</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/cs/out_parameter_modifier.html"><strong aria-hidden="true">4.2.5.</strong> out_parameter_modifier</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/cs/csharp-coding-conventions.html"><strong aria-hidden="true">4.2.6.</strong> csharp-coding-conventions</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/cs/c#-const-static-readonly.html"><strong aria-hidden="true">4.2.7.</strong> c#-const-static-readonly</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/cs/csproj.html"><strong aria-hidden="true">4.2.8.</strong> csproj</a></li></ol></li><li class="chapter-item expanded "><a href="../../Programming_Languages/c/index.html"><strong aria-hidden="true">4.3.</strong> c</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Programming_Languages/c/c_basics.html"><strong aria-hidden="true">4.3.1.</strong> c_basics</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/c/c_memory_management.html"><strong aria-hidden="true">4.3.2.</strong> c_memory_management</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/c/c_misc.html"><strong aria-hidden="true">4.3.3.</strong> c_misc</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/c/c_linked_list.html"><strong aria-hidden="true">4.3.4.</strong> c_linked_list</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/c/c_debug.html"><strong aria-hidden="true">4.3.5.</strong> c_debug</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/c/c_compilation.html"><strong aria-hidden="true">4.3.6.</strong> c_compilation</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/c/c_dynamic_allocation.html"><strong aria-hidden="true">4.3.7.</strong> c_dynamic_allocation</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/c/c_oop.html"><strong aria-hidden="true">4.3.8.</strong> c_oop</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/c/c_strings.html"><strong aria-hidden="true">4.3.9.</strong> c_strings</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/c/c_ptr.html"><strong aria-hidden="true">4.3.10.</strong> c_ptr</a></li></ol></li><li class="chapter-item expanded "><a href="../../Programming_Languages/js/index.html"><strong aria-hidden="true">4.4.</strong> js</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Programming_Languages/js/ts-array-vs-tuple.html"><strong aria-hidden="true">4.4.1.</strong> ts-array-vs-tuple</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/js/js_modules.html"><strong aria-hidden="true">4.4.2.</strong> js_modules</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/js/how_to_resolve_namespace_collision.html"><strong aria-hidden="true">4.4.3.</strong> how_to_resolve_namespace_collision</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/js/is-javascript-event-driven.html"><strong aria-hidden="true">4.4.4.</strong> is-javascript-event-driven</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/js/in-js-what-does-e-mean.html"><strong aria-hidden="true">4.4.5.</strong> in-js-what-does-e-mean</a></li></ol></li><li class="chapter-item expanded "><a href="../../Programming_Languages/dotnet/index.html"><strong aria-hidden="true">4.5.</strong> dotnet</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Programming_Languages/dotnet/tests.html"><strong aria-hidden="true">4.5.1.</strong> tests</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/dotnet/csproj-vs-sln.html"><strong aria-hidden="true">4.5.2.</strong> csproj-vs-sln</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/dotnet/dotnet-vs-c#.html"><strong aria-hidden="true">4.5.3.</strong> dotnet-vs-c#</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/dotnet/test-framework.html"><strong aria-hidden="true">4.5.4.</strong> test-framework</a></li></ol></li><li class="chapter-item expanded "><a href="../../Programming_Languages/bash/index.html"><strong aria-hidden="true">4.6.</strong> bash</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Programming_Languages/bash/IFS_meaning.html"><strong aria-hidden="true">4.6.1.</strong> IFS_meaning</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/bash/bash-arrays.html"><strong aria-hidden="true">4.6.2.</strong> bash-arrays</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/bash/bash-redirection.html"><strong aria-hidden="true">4.6.3.</strong> bash-redirection</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/bash/create_multiple_files.html"><strong aria-hidden="true">4.6.4.</strong> create_multiple_files</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/bash/create-multiple-nested-directories.html"><strong aria-hidden="true">4.6.5.</strong> create-multiple-nested-directories</a></li></ol></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/index.html"><strong aria-hidden="true">4.7.</strong> rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-box.html"><strong aria-hidden="true">4.7.1.</strong> rust-box</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/use-vs-mod-rs.html"><strong aria-hidden="true">4.7.2.</strong> use-vs-mod-rs</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/cargo-conventions.html"><strong aria-hidden="true">4.7.3.</strong> cargo-conventions</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rs_prelude.html"><strong aria-hidden="true">4.7.4.</strong> rs_prelude</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-iterator-fold.html"><strong aria-hidden="true">4.7.5.</strong> rust-iterator-fold</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-basic-http-server.html"><strong aria-hidden="true">4.7.6.</strong> rust-basic-http-server</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-impl-vs-dyn.html"><strong aria-hidden="true">4.7.7.</strong> rust-impl-vs-dyn</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-cow.html"><strong aria-hidden="true">4.7.8.</strong> rust-cow</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-terms.html"><strong aria-hidden="true">4.7.9.</strong> rust-terms</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-ron.html"><strong aria-hidden="true">4.7.10.</strong> rust-ron</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-arc.html"><strong aria-hidden="true">4.7.11.</strong> rust-arc</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-macro-notes.html"><strong aria-hidden="true">4.7.12.</strong> rust-macro-notes</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-closure.html"><strong aria-hidden="true">4.7.13.</strong> rust-closure</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-ptr.html"><strong aria-hidden="true">4.7.14.</strong> rust-ptr</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-module-system.html"><strong aria-hidden="true">4.7.15.</strong> rust-module-system</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rs_msrv.html"><strong aria-hidden="true">4.7.16.</strong> rs_msrv</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-traits.html"><strong aria-hidden="true">4.7.17.</strong> rust-traits</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-associated-function-vs-method.html"><strong aria-hidden="true">4.7.18.</strong> rust-associated-function-vs-method</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-vs-go.html"><strong aria-hidden="true">4.7.19.</strong> rust-vs-go</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/cargo-lock.html"><strong aria-hidden="true">4.7.20.</strong> cargo-lock</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-rc.html"><strong aria-hidden="true">4.7.21.</strong> rust-rc</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-basics.html"><strong aria-hidden="true">4.7.22.</strong> rust-basics</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rs_send-sync.html"><strong aria-hidden="true">4.7.23.</strong> rs_send-sync</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-notes1.html"><strong aria-hidden="true">4.7.24.</strong> rust-notes1</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-crates-packages-modules.html"><strong aria-hidden="true">4.7.25.</strong> rust-crates-packages-modules</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-option.html"><strong aria-hidden="true">4.7.26.</strong> rust-option</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust_trait-bound.html"><strong aria-hidden="true">4.7.27.</strong> rust_trait-bound</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-iterators.html"><strong aria-hidden="true">4.7.28.</strong> rust-iterators</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rs-diverging-function.html"><strong aria-hidden="true">4.7.29.</strong> rs-diverging-function</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/rust/rust-whats-the-point-of-borrowing.html"><strong aria-hidden="true">4.7.30.</strong> rust-whats-the-point-of-borrowing</a></li></ol></li><li class="chapter-item expanded "><a href="../../Programming_Languages/java/index.html"><strong aria-hidden="true">4.8.</strong> java</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Programming_Languages/java/effective-java.html"><strong aria-hidden="true">4.8.1.</strong> effective-java</a></li></ol></li><li class="chapter-item expanded "><a href="../../Programming_Languages/python/index.html"><strong aria-hidden="true">4.9.</strong> python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Programming_Languages/python/first-few-letters-of-string.html"><strong aria-hidden="true">4.9.1.</strong> first-few-letters-of-string</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/python/do-while.html"><strong aria-hidden="true">4.9.2.</strong> do-while</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/python/python_string-slicing.html"><strong aria-hidden="true">4.9.3.</strong> python_string-slicing</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/python/for-loop.html"><strong aria-hidden="true">4.9.4.</strong> for-loop</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/python/sqlite3.html"><strong aria-hidden="true">4.9.5.</strong> sqlite3</a></li></ol></li><li class="chapter-item expanded "><a href="../../Programming_Languages/go/index.html"><strong aria-hidden="true">4.10.</strong> go</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Programming_Languages/go/does-go-have-fold.html"><strong aria-hidden="true">4.10.1.</strong> does-go-have-fold</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/go/go-packages.html" class="active"><strong aria-hidden="true">4.10.2.</strong> go-packages</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/go/go-basics.html"><strong aria-hidden="true">4.10.3.</strong> go-basics</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/go/local-module-naming-convention.html"><strong aria-hidden="true">4.10.4.</strong> local-module-naming-convention</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/go/how-to-use-local-package-go.html"><strong aria-hidden="true">4.10.5.</strong> how-to-use-local-package-go</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/go/go-module-naming-conventions.html"><strong aria-hidden="true">4.10.6.</strong> go-module-naming-conventions</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/go/go-tutorial.html"><strong aria-hidden="true">4.10.7.</strong> go-tutorial</a></li><li class="chapter-item expanded "><a href="../../Programming_Languages/go/when-should-you-use-go.html"><strong aria-hidden="true">4.10.8.</strong> when-should-you-use-go</a></li><li class="spacer"></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../Programming_Systems/index.html"><strong aria-hidden="true">5.</strong> Programming_Systems</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Programming_Systems/system_basics.html"><strong aria-hidden="true">5.1.</strong> system_basics</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/os.html"><strong aria-hidden="true">5.2.</strong> os</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/mutex.html"><strong aria-hidden="true">5.3.</strong> mutex</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/process.html"><strong aria-hidden="true">5.4.</strong> process</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/events.html"><strong aria-hidden="true">5.5.</strong> events</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/kernel.html"><strong aria-hidden="true">5.6.</strong> kernel</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/green_thread.html"><strong aria-hidden="true">5.7.</strong> green_thread</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/cpu-speed.html"><strong aria-hidden="true">5.8.</strong> cpu-speed</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/programming_async_concurrency_parallelism.html"><strong aria-hidden="true">5.9.</strong> programming_async_concurrency_parallelism</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/shell_vs_terminal.html"><strong aria-hidden="true">5.10.</strong> shell_vs_terminal</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/socket.html"><strong aria-hidden="true">5.11.</strong> socket</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/task.html"><strong aria-hidden="true">5.12.</strong> task</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/multithreading.html"><strong aria-hidden="true">5.13.</strong> multithreading</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/process_vs_thread.html"><strong aria-hidden="true">5.14.</strong> process_vs_thread</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/thread.html"><strong aria-hidden="true">5.15.</strong> thread</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/system_call.html"><strong aria-hidden="true">5.16.</strong> system_call</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/async.html"><strong aria-hidden="true">5.17.</strong> async</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/concurrency/index.html"><strong aria-hidden="true">5.18.</strong> concurrency</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Programming_Systems/concurrency/await.html"><strong aria-hidden="true">5.18.1.</strong> await</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/concurrency/async-concurrency-threading.html"><strong aria-hidden="true">5.18.2.</strong> async-concurrency-threading</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/concurrency/concurrency.html"><strong aria-hidden="true">5.18.3.</strong> concurrency</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/concurrency/async-discussion-00.html"><strong aria-hidden="true">5.18.4.</strong> async-discussion-00</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/concurrency/async-await-tips.html"><strong aria-hidden="true">5.18.5.</strong> async-await-tips</a></li><li class="chapter-item expanded "><a href="../../Programming_Systems/concurrency/async-callback.html"><strong aria-hidden="true">5.18.6.</strong> async-callback</a></li><li class="spacer"></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../Computer_Science/index.html"><strong aria-hidden="true">6.</strong> Computer_Science</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Computer_Science/hashing.html"><strong aria-hidden="true">6.1.</strong> hashing</a></li><li class="chapter-item expanded "><a href="../../Computer_Science/computer_basics.html"><strong aria-hidden="true">6.2.</strong> computer_basics</a></li><li class="chapter-item expanded "><a href="../../Computer_Science/data-structures_elementary.html"><strong aria-hidden="true">6.3.</strong> data-structures_elementary</a></li><li class="chapter-item expanded "><a href="../../Computer_Science/what_is_a_program.html"><strong aria-hidden="true">6.4.</strong> what_is_a_program</a></li><li class="chapter-item expanded "><a href="../../Computer_Science/data-structures-algorithms.html"><strong aria-hidden="true">6.5.</strong> data-structures-algorithms</a></li><li class="chapter-item expanded "><a href="../../Computer_Science/goap.html"><strong aria-hidden="true">6.6.</strong> goap</a></li><li class="chapter-item expanded "><a href="../../Computer_Science/data_type_vs_data_structure.html"><strong aria-hidden="true">6.7.</strong> data_type_vs_data_structure</a></li><li class="chapter-item expanded "><a href="../../Computer_Science/pointers.html"><strong aria-hidden="true">6.8.</strong> pointers</a></li><li class="chapter-item expanded "><a href="../../Computer_Science/data_structures.html"><strong aria-hidden="true">6.9.</strong> data_structures</a></li><li class="chapter-item expanded "><a href="../../Computer_Science/graphs/index.html"><strong aria-hidden="true">6.10.</strong> graphs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Computer_Science/graphs/graph_algorithms.html"><strong aria-hidden="true">6.10.1.</strong> graph_algorithms</a></li><li class="spacer"></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../Project_Management/index.html"><strong aria-hidden="true">7.</strong> Project_Management</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Project_Management/decisive_framework.html"><strong aria-hidden="true">7.1.</strong> decisive_framework</a></li><li class="chapter-item expanded "><a href="../../Project_Management/project_definition.html"><strong aria-hidden="true">7.2.</strong> project_definition</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><a href="../../Cloud/index.html"><strong aria-hidden="true">8.</strong> Cloud</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Cloud/aws/index.html"><strong aria-hidden="true">8.1.</strong> aws</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Cloud/aws/module01_intro.html"><strong aria-hidden="true">8.1.1.</strong> module01_intro</a></li><li class="chapter-item expanded "><a href="../../Cloud/aws/module03_global_infrastructure_reliability.html"><strong aria-hidden="true">8.1.2.</strong> module03_global_infrastructure_reliability</a></li><li class="chapter-item expanded "><a href="../../Cloud/aws/module05_storage_database.html"><strong aria-hidden="true">8.1.3.</strong> module05_storage_database</a></li><li class="chapter-item expanded "><a href="../../Cloud/aws/module02_cloud_compute.html"><strong aria-hidden="true">8.1.4.</strong> module02_cloud_compute</a></li><li class="chapter-item expanded "><a href="../../Cloud/aws/module10_cloud_journey.html"><strong aria-hidden="true">8.1.5.</strong> module10_cloud_journey</a></li><li class="chapter-item expanded "><a href="../../Cloud/aws/module04_networking.html"><strong aria-hidden="true">8.1.6.</strong> module04_networking</a></li><li class="chapter-item expanded "><a href="../../Cloud/aws/module07_monitoring_analytics.html"><strong aria-hidden="true">8.1.7.</strong> module07_monitoring_analytics</a></li><li class="chapter-item expanded "><a href="../../Cloud/aws/module06_security.html"><strong aria-hidden="true">8.1.8.</strong> module06_security</a></li><li class="chapter-item expanded "><a href="../../Cloud/aws/module08_pricing_support.html"><strong aria-hidden="true">8.1.9.</strong> module08_pricing_support</a></li><li class="chapter-item expanded "><a href="../../Cloud/aws/module09_migration.html"><strong aria-hidden="true">8.1.10.</strong> module09_migration</a></li><li class="spacer"></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../Programming/index.html"><strong aria-hidden="true">9.</strong> Programming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Programming/programming-hook.html"><strong aria-hidden="true">9.1.</strong> programming-hook</a></li><li class="chapter-item expanded "><a href="../../Programming/callback.html"><strong aria-hidden="true">9.2.</strong> callback</a></li><li class="chapter-item expanded "><a href="../../Programming/closure.html"><strong aria-hidden="true">9.3.</strong> closure</a></li><li class="chapter-item expanded "><a href="../../Programming/discriminated-unions.html"><strong aria-hidden="true">9.4.</strong> discriminated-unions</a></li><li class="chapter-item expanded "><a href="../../Programming/testing.html"><strong aria-hidden="true">9.5.</strong> testing</a></li><li class="chapter-item expanded "><a href="../../Programming/type_erasure.html"><strong aria-hidden="true">9.6.</strong> type_erasure</a></li><li class="chapter-item expanded "><a href="../../Programming/programming_pointer.html"><strong aria-hidden="true">9.7.</strong> programming_pointer</a></li><li class="chapter-item expanded "><a href="../../Programming/loop_comment.html"><strong aria-hidden="true">9.8.</strong> loop_comment</a></li><li class="chapter-item expanded "><a href="../../Programming/why-is-memory-management-important.html"><strong aria-hidden="true">9.9.</strong> why-is-memory-management-important</a></li><li class="chapter-item expanded "><a href="../../Programming/linter.html"><strong aria-hidden="true">9.10.</strong> linter</a></li><li class="chapter-item expanded "><a href="../../Programming/the-linux-programming-interface-notes.html"><strong aria-hidden="true">9.11.</strong> the-linux-programming-interface-notes</a></li><li class="chapter-item expanded "><a href="../../Programming/programming_basics.html"><strong aria-hidden="true">9.12.</strong> programming_basics</a></li><li class="chapter-item expanded "><a href="../../Programming/build-vs-compile.html"><strong aria-hidden="true">9.13.</strong> build-vs-compile</a></li><li class="chapter-item expanded "><a href="../../Programming/memory-leak-analogy.html"><strong aria-hidden="true">9.14.</strong> memory-leak-analogy</a></li><li class="chapter-item expanded "><a href="../../Programming/programming-glossary.html"><strong aria-hidden="true">9.15.</strong> programming-glossary</a></li><li class="chapter-item expanded "><a href="../../Programming/static-vs-shared-library.html"><strong aria-hidden="true">9.16.</strong> static-vs-shared-library</a></li><li class="chapter-item expanded "><a href="../../Programming/handle.html"><strong aria-hidden="true">9.17.</strong> handle</a></li><li class="chapter-item expanded "><a href="../../Programming/compile-time-function-evaluation.html"><strong aria-hidden="true">9.18.</strong> compile-time-function-evaluation</a></li><li class="chapter-item expanded "><a href="../../Programming/programming_generic_type.html"><strong aria-hidden="true">9.19.</strong> programming_generic_type</a></li><li class="chapter-item expanded "><a href="../../Programming/get-args-from-command-line.html"><strong aria-hidden="true">9.20.</strong> get-args-from-command-line</a></li><li class="chapter-item expanded "><a href="../../Programming/type_erasure-reification.html"><strong aria-hidden="true">9.21.</strong> type_erasure-reification</a></li><li class="chapter-item expanded "><a href="../../Programming/programming-terms.html"><strong aria-hidden="true">9.22.</strong> programming-terms</a></li><li class="chapter-item expanded "><a href="../../Programming/type-parameters.html"><strong aria-hidden="true">9.23.</strong> type-parameters</a></li><li class="chapter-item expanded "><a href="../../Programming/debugging-static-dynamic-analysis.html"><strong aria-hidden="true">9.24.</strong> debugging-static-dynamic-analysis</a></li><li class="chapter-item expanded "><a href="../../Programming/common.html"><strong aria-hidden="true">9.25.</strong> common</a></li><li class="chapter-item expanded "><a href="../../Programming/understanding_oop.html"><strong aria-hidden="true">9.26.</strong> understanding_oop</a></li><li class="chapter-item expanded "><a href="../../Programming/super-and-self.html"><strong aria-hidden="true">9.27.</strong> super-and-self</a></li><li class="chapter-item expanded "><a href="../../Programming/user-value.html"><strong aria-hidden="true">9.28.</strong> user-value</a></li><li class="chapter-item expanded "><a href="../../Programming/environment_variables.html"><strong aria-hidden="true">9.29.</strong> environment_variables</a></li><li class="chapter-item expanded "><a href="../../Programming/web/index.html"><strong aria-hidden="true">9.30.</strong> web</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Programming/web/html_terms.html"><strong aria-hidden="true">9.30.1.</strong> html_terms</a></li></ol></li><li class="chapter-item expanded "><a href="../../Programming/design_patterns/index.html"><strong aria-hidden="true">9.31.</strong> design_patterns</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Programming/design_patterns/flux.html"><strong aria-hidden="true">9.31.1.</strong> flux</a></li><li class="chapter-item expanded "><a href="../../Programming/design_patterns/mvc.html"><strong aria-hidden="true">9.31.2.</strong> mvc</a></li><li class="chapter-item expanded "><a href="../../Programming/design_patterns/ioc.html"><strong aria-hidden="true">9.31.3.</strong> ioc</a></li><li class="chapter-item expanded "><a href="../../Programming/design_patterns/command.html"><strong aria-hidden="true">9.31.4.</strong> command</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>faiface
+·
+4 yr. ago
+Silver</p>
+<p>In Go, you don't think too much in terms of files, but instead in terms of packages. Running go build will always treat all files in a directory as a part of the same package, same namespace.</p>
+<p>For example, if your directory has two files: main.go and help.go, and help.go defines a function called help, all code from main.go can call this function without any imports. In other words: all files in the same directory &quot;see each other&quot;.</p>
+<p>All .go files in a directory together make a package.</p>
+<p>There are two kinds of packages.</p>
+<p>The first kind is libraries. These are meant to be imported by other packages. Their package name should, by convention, be the same as their directory name. Their package name is what the importer will use to access the package. For example, all files in the &quot;fmt&quot; package begin with package fmt. That's why when you do import &quot;fmt&quot;, you use fmt.Println to access the Println function.</p>
+<p>The second kind of packages is runnable programs. Their package name is always main, so all the files in this package start with package main. These packages cannot be imported and they must contain a main function. That means that exactly one file in the directory must contain it. Doesn't matter which one.</p>
+<p>Hope this clarifies it. If not, please ask more questions.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../Programming_Languages/go/does-go-have-fold.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../Programming_Languages/go/go-basics.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../Programming_Languages/go/does-go-have-fold.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../Programming_Languages/go/go-basics.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
